@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "unifill",
+    "version": "1.0",
+    "description": "Adds a red border to all webpages matching mozilla.org.",
+    "icons": {
+        "48": "icon-tab.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "borderify.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "icon-tab.png",
+        "default_title": "unifill",
+        "default_popup": "popup.html"
+    }
+}
